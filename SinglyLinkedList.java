@@ -98,9 +98,9 @@ public class SinglyLinkedList<E> {
         Node<E> curr = head;
         Node<E> prev = null;
         tail = head;
-        while (curr != null){
-            Node<E> nextNode = curr.next;
-            curr.next = prev;
+        while (curr != null) {
+            Node<E> nextNode = curr.getNext();
+            curr.setNext(prev);
             prev = curr;
             curr = nextNode;
         }
